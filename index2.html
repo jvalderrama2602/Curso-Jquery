@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		x=$(document);
+		x.ready(inicializar);
+
+		function inicializar(){
+			var x;
+			x=$("h1");
+			x.click(presionar);
+		}
+		function presionar(){
+
+			var x;
+			x=$(this);
+			x.css("font-size", "12px")
+
+		}
+
+	</script>
+
+</head>
+<body>
+	<h1>Yo soy titulo</h1>
+	<p>Esto es un parrafo</p>
+	<h1>Yo soy titulo</h1>
+	<p>Esto es un parrafo</p>
+	<h1>Yo soy titulo</h1>
+	<p>Esto es un parrafo</p>
+	<h1>Yo soy titulo</h1>
+	<p>Esto es un parrafo</p>
+	<h1>Yo soy titulo</h1>
+	<p>Esto es un parrafo</p>
+</body>
+</html>
