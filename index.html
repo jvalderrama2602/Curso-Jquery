@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		var x;
+		x=$(document);
+		x.ready(resaltar);
+
+		function resaltar(){
+			var x;
+			x=$("#boton");
+			x.click(resaltame);
+
+		function resaltame(){
+			var x;
+			x=$(".primario");
+			x.css("background-color","yellow");
+
+		}
+
+
+
+		}
+
+	</script>
+
+</head>
+<body>
+	<input type="button" value="Colores Primarios" id="boton"><br>
+
+	<span class="primario">Amarillo</span><br>
+	<span>Fucsia</span><br>
+	<span class="primario">Azul</span><br>
+	<span>Negro</span><br>
+	<span class="primario">Rojo</span><br>
+
+
+	
+</body>
+</html>
