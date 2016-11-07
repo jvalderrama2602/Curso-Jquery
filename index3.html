@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#revelar");
+			x.click(mostrar);
+		}
+		function mostrar(){
+
+			var x;
+			x=$("[href]");
+			x.css("background", "yellow")
+
+		}
+
+	</script>
+
+</head>
+<body>
+<input type="button" id="revelar" value="revelar"><br>
+<a href="#">Enlace 1</a><br>
+<a href="#">Enlace 2</a><br>
+<a href="#">Enlace 3</a><br>
+<a href="#">Enlace 4</a><br>
+<a href="#">Enlace 5</a><br>
+
+<ul>
+	<li>Enlace 1</li>
+	<li>Enlace 2</li>
+	<li>Enlace 3</li>
+	<li>Enlace 4</li>
+	<li>Enlace 5</li>
+</ul>
+
+
+</body>
+</html>
