@@ -9,12 +9,13 @@
 		x.ready(inicio);
 
 		function inicio(){
-			var x=$("#hola");
-			x.dblclick(dobleclick)
+			var x=$("#usuario");
+			x.focus(enfocar)
 			
 		}
-		function dobleclick(){
-			alert("Has hecho dobleclick en el elemento")
+		function enfocar(){
+			var x=$("#usuario");
+			x.attr("value","")
 		}
 		
 		
@@ -23,7 +24,12 @@
 
 </head>
 <body>
-<div id="hola">Pulsar</div>
+<form>
+	<input value="Usuario" id="usuario" type="text">
+	<input type="submit">
+
+
+</form>
 
 
 </body>
