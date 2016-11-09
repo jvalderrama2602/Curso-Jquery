@@ -10,8 +10,9 @@
 
 		function inicio(){
 			var x=$("#hola");
-			x.mouseover(entra);
-			x.mouseout(sale);
+			/*x.mouseover(entra);
+			x.mouseout(sale);*/
+			x.hover(entra,sale)
 		}
 		function entra(){
 			$(this).css("background-color","yellow");
