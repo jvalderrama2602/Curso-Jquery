@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#usuario");
+			x.focus(enfocar);
+			x.blur(desenfocar);
+			
+		}
+		function enfocar(){
+			var x=$("#usuario");
+			x.attr("value","")
+		}
+		
+		function desenfocar(){
+			var x=$("#usuario");
+			x.attr("value","Usuario")
+		}
+
+	</script>
+
+</head>
+<body>
+<form>
+	<input value="Usuario" id="usuario" type="text">
+	<input type="submit">
+
+
+</form>
+
+
+</body>
+</html>
