@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#boton1");
+			x.click(mostrar);
+			
+			
+		}
+		function mostrar(){
+			var x=$("#objetivo");
+			x.toggle("fast");
+		}
+		
+	
+	</script>
+	<style>
+		#objetivo{
+			width: 200px;
+			height:200px;
+			background-color: yellow;
+			border: 1px solid black ;
+		}
+
+
+
+	</style>
+
+
+
+
+</head>
+<body>
+<form>
+	<input value="mostrar" id="boton1" type="button">
+	
+	
+
+	<p id="objetivo">Este es el texto antiguo</p>
+
+</form>
+
+
+</body>
+</html>
