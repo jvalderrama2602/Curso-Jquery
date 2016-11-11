@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#boton1");
+			x.click(leer);
+			var x=$("#boton2");
+			x.click(escribir);
+			
+		}
+		function leer(){
+			var x=$("p");
+			alert(x.text());
+		}
+		
+		function escribir(){
+			var x=$("p");
+			x.text("Este es texto nuevo");
+		}
+		
+	</script>
+
+</head>
+<body>
+<form>
+	<input value="leer" id="boton1" type="button">
+	<input value="escribir" id="boton2" type="button">
+
+	<p>Este es el texto antiguo</p>
+
+</form>
+
+
+</body>
+</html>
