@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery UI</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<script>
+
+	var x=$(document);
+	x.ready(inicio)
+
+	function inicio(){
+		var x=$("#mueve");
+		x.draggable();	
+		x=$("#soltar");
+		x.droppable({drop:soltado});
+	}
+
+	function soltado(){
+		var x=$("#soltar");
+		x.css("background:","cyan");
+
+
+
+	}
+
+
+	</script>
+
+	<style>
+		#mueve{
+			width: 100px;
+			height: 100px;
+			border: 1px solid cyan;	
+
+		}
+		#soltar{
+			width: 300px;
+			height: 300px;
+			border: 1px solid orange;	
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+<div id="mueve">Mover</div>
+
+<div id="soltar">Poner aqui</div>
+
+</body>
+</html>
