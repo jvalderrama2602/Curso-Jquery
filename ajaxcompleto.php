@@ -1,6 +1,5 @@
 <?php
 
-echo $_POST['ano'] + 1;
-
+echo $_POST['anio'];
 
 ?>
