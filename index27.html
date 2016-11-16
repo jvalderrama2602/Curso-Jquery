@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#esconder");
+			x.click(esconde);
+		}
+		function esconde(){
+			var x;
+			x=$("#re");
+			x.hide(5000,function(){alert("escondido")})
+
+
+
+
+		}
+			
+
+
+
+
+	</script>
+	<style>
+		#re{
+		width: 100px;
+		height: 100px;
+		border: 1px solid black;
+		background: yellow;
+		}
+	</style>
+
+
+
+</head>
+<body>
+
+
+	
+
+	<input type="button" value="Esconder" id="esconder">
+
+	
+
+<div id="re"></div>
+
+
+</body>
+</html>
