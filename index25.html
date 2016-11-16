@@ -5,7 +5,31 @@
 	<title>Ejercicios con Jquery</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
-	
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#enviar");
+			x.click(calcular);
+		
+		function calcular(){
+			var v=$('#numero').attr("value");
+			$.post("calculadora.php",{numero:v},recibir);
+			return false;
+
+		function recibir(datos){
+			alert(hola)
+			var x=$("#resultado")
+			x.html(datos)
+
+		}
+
+
+
+		}			
+
+	</script>
 
 
 
@@ -14,7 +38,7 @@
 <body>
 
 	Multiplicación por 5
-	<form action="calculadora.php" method="get">
+	<form action="calculadora.php" method="post">
 
 	<input type="text" id="numero" name="numero">
 

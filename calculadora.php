@@ -1,6 +1,6 @@
 <?php
 
-$mult = $_GET['numero']*5;
+$mult = $_POST['numero']*5;
 echo $mult;
 
 ?>

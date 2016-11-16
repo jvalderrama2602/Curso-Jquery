@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios con Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script>
+		x=$(document);
+		x.ready(inicio);
+
+		function inicio(){
+			var x=$("#enviar");
+			x.click(enviar);
+		}
+		function enviar(){
+			var v=$("#numero").attr("value");
+			$.ajax({
+				async:true,
+				type:"POST",
+				dataType:"html",
+				contentType:"application/x-www-form-urlencoded",
+				url:"ajaxcompleto.php",
+				data:"ano="+v,
+				beforeSend:inicioEnvio,
+				success:llegada,
+				timeout:4000,
+				error:problemas
+			});
+			return false;
+		}
+
+		function inicioEnvio(){
+			var x=$("#resultado");
+			x.html("Cargando...");
+		}
+		function llegada(datos){
+			$("#resultado").text(datos);
+		}
+
+		function problemas(){
+			$("#resultado").text("Problemas en el servidor");
+		}
+
+
+
+
+	</script>
+
+
+
+
+</head>
+<body>
+
+
+	
+	<p>Que año es </p>
+	<input type="text" id="ano" name="ano">
+
+	<input type="submit" value="Enviar" id="enviar">
+
+	
+
+<div id="resultado"></div>
+
+
+</body>
+</html>
