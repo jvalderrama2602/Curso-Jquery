@@ -10,30 +10,18 @@
 		x.ready(inicio);
 
 		function inicio(){
-			var x=$("#esconder");
-			x.click(esconde);
+			var x=$("#boton");
+			x.click(rellena);
 		}
-		function esconde(){
-			var x;
-			x=$("#re");
-			x.hide(5000,function(){alert("escondido")})
+		function rellena(){
+			var x = $("#re");
+			x.text("Hola");
 		}
 	</script>
-	<style>
-		#re{
-		width: 100px;
-		height: 100px;
-		border: 1px solid black;
-		background: yellow;
-		}
-	</style>
+	
 </head>
 <body>
-
-
-	
-
-	<input type="button" value="Esconder" id="esconder">
+<input type="button" value="pulsar" id="boton">
 
 	
 
